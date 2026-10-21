@@ -1,0 +1,21 @@
+/*
+Theme Name: Perfect 10
+Theme URI: https://lasperfect10s.com
+Author: Perfect 10 Studio
+Author URI: https://lasperfect10s.com
+Description: The Las10Perfect.com directory theme. A dark, editorial luxury directory for an 18+ independent companion referral network, fully dynamic and built for Elementor. Profiles, counties, cities, categories, reviews, packages and enquiries are managed in WordPress; pages and homepage sections are editable with free Elementor. Includes a cascading county/city search, directory filters, an 18+ age gate, secure booking/listing/concierge/profile forms, a safe demo importer, and Schema.org output.
+Version: 2.0.0
+Requires at least: 6.4
+Tested up to: 6.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: perfect10
+Tags: directory, custom-post-types, elementor, dark, gold, custom-colors, custom-menu, featured-images, translation-ready
+*/
+
+/*
+ * All visual styling lives in /assets/css/main.css and is enqueued by
+ * inc/assets.php. This file intentionally only carries the theme header so
+ * that WordPress can identify the theme.
+ */

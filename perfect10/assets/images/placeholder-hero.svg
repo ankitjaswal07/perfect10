@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1400" width="2400" height="1400" role="img" aria-label="Placeholder">
+  <defs>
+    <linearGradient id="h1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1610"/>
+      <stop offset="0.45" stop-color="#0d0b09"/>
+      <stop offset="1" stop-color="#050403"/>
+    </linearGradient>
+    <radialGradient id="h2" cx="0.22" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#d4af37" stop-opacity="0.22"/>
+      <stop offset="0.55" stop-color="#d4af37" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="h3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0b0a09"/>
+      <stop offset="1" stop-color="#0b0a09" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="1400" fill="url(#h1)"/>
+  <rect width="2400" height="1400" fill="url(#h2)"/>
+  <g stroke="#d4af37" stroke-opacity="0.07" stroke-width="1">
+    <path d="M0 1080 H2400 M0 1120 H2400 M0 1160 H2400"/>
+  </g>
+  <g fill="none" stroke="#d4af37" stroke-opacity="0.14" stroke-width="1.5">
+    <path d="M1200 470 L1330 700 L1200 930 L1070 700 Z"/>
+    <path d="M1200 545 L1288 700 L1200 855 L1112 700 Z"/>
+  </g>
+  <g fill="#d4af37" fill-opacity="0.5">
+    <circle cx="1200" cy="700" r="4"/>
+  </g>
+  <text x="1200" y="1010" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="42" letter-spacing="16" fill="#f5f0e6" fill-opacity="0.28">PERFECT 10</text>
+  <text x="1200" y="1058" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" letter-spacing="9" fill="#d4af37" fill-opacity="0.42">ADD A HERO IMAGE · 2400 × 1400</text>
+  <rect width="2400" height="1400" fill="url(#h3)" opacity="0.55"/>
+</svg>

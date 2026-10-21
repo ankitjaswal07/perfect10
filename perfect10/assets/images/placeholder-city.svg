@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" width="1400" height="800" role="img" aria-label="City placeholder">
+  <defs>
+    <linearGradient id="c1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#181410"/>
+      <stop offset="0.55" stop-color="#0e0c09"/>
+      <stop offset="1" stop-color="#070605"/>
+    </linearGradient>
+    <radialGradient id="c2" cx="0.8" cy="0.15" r="0.7">
+      <stop offset="0" stop-color="#d4af37" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="c3" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0b0a09"/>
+      <stop offset="1" stop-color="#0b0a09" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="800" fill="url(#c1)"/>
+  <rect width="1400" height="800" fill="url(#c2)"/>
+  <g fill="#0b0a09" stroke="#d4af37" stroke-opacity="0.16" stroke-width="1.5">
+    <path d="M120 800 V520 H210 V800 Z"/>
+    <path d="M240 800 V430 H300 V380 H360 V800 Z"/>
+    <path d="M400 800 V560 H470 V800 Z"/>
+    <path d="M510 800 V330 H580 V270 H620 V800 Z"/>
+    <path d="M660 800 V480 H740 V800 Z"/>
+    <path d="M780 800 V380 H840 V320 H900 V800 Z"/>
+    <path d="M940 800 V540 H1010 V800 Z"/>
+    <path d="M1050 800 V440 H1130 V800 Z"/>
+    <path d="M1170 800 V580 H1250 V800 Z"/>
+  </g>
+  <g fill="#d4af37" fill-opacity="0.18">
+    <rect x="262" y="452" width="12" height="12"/><rect x="292" y="452" width="12" height="12"/>
+    <rect x="532" y="352" width="12" height="12"/><rect x="562" y="392" width="12" height="12"/>
+    <rect x="802" y="402" width="12" height="12"/><rect x="862" y="352" width="12" height="12"/>
+    <rect x="1072" y="462" width="12" height="12"/><rect x="1102" y="502" width="12" height="12"/>
+  </g>
+  <text x="700" y="240" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="22" letter-spacing="8" fill="#f5f0e6" fill-opacity="0.26">CITY COVER</text>
+  <text x="700" y="274" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" letter-spacing="6" fill="#d4af37" fill-opacity="0.4">1400 × 800</text>
+  <rect width="1400" height="800" fill="url(#c3)"/>
+</svg>
