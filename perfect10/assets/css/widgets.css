@@ -1,0 +1,355 @@
+/* =========================================================================
+   Perfect 10 — Elementor widget additions
+   Loaded after main.css. All original design tokens and section/card/button
+   styles live in main.css; this file only covers components that are new to
+   the widget library and the small amount of editor compatibility needed for
+   the same markup to render inside Elementor sections.
+   ====================================================================== */
+
+/* Elementor's default widget/column spacing must not add gaps between the
+   Perfect 10 sections that already carry their own generous padding. */
+.elementor-widget[class*="elementor-widget-p10-"]:not(:last-child),
+.elementor-widget[class*="elementor-widget-p10_"]:not(:last-child) {
+  margin-block-end: 0;
+}
+
+.elementor-widget-p10-hero,
+.elementor-widget-p10_hero,
+.elementor-widget-p10-marquee,
+.elementor-widget-p10_marquee {
+  width: 100%;
+}
+
+.elementor-section.p10-el-section > .elementor-container,
+.elementor-section.p10-el-section .elementor-column-wrap {
+  max-width: none;
+}
+
+.p10-elementor-home,
+.p10-editor-content {
+  width: 100%;
+}
+
+/* Empty states ---------------------------------------------------------- */
+.p10-empty {
+  margin: 0;
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  border: 1px dashed var(--p10-line);
+  color: var(--p10-muted);
+  font-family: var(--p10-ui);
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.p10-elementor-note {
+  margin: 0;
+  padding: 14px 18px;
+  border-left: 2px solid var(--p10-gold);
+  background: rgb(var(--p10-gold-rgb) / 0.06);
+  color: var(--p10-muted);
+  font-family: var(--p10-ui);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* FAQ ------------------------------------------------------------------ */
+.p10-faq {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--p10-line);
+}
+
+.p10-faq__item {
+  border-bottom: 1px solid var(--p10-line);
+}
+
+.p10-faq__item summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.1rem, 2.4vw, 1.7rem) 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--p10-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  font-weight: 500;
+  color: var(--p10-cream);
+  transition: color var(--p10-fast) var(--p10-ease);
+}
+
+.p10-faq__item summary::-webkit-details-marker { display: none; }
+.p10-faq__item summary:hover { color: var(--p10-gold-soft); }
+
+.p10-faq__item summary .p10-faq__num {
+  margin-right: 1rem;
+  font-family: var(--p10-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--p10-gold);
+}
+
+.p10-faq__item summary .p10-faq__sign {
+  flex: 0 0 auto;
+  font-family: var(--p10-ui);
+  font-size: 1rem;
+  color: var(--p10-gold);
+  transition: transform var(--p10-fast) var(--p10-ease);
+}
+.p10-faq__item[open] summary .p10-faq__sign { transform: rotate(45deg); }
+
+.p10-faq__answer {
+  padding: 0 0 1.6rem;
+  max-width: 72ch;
+  color: var(--p10-muted);
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+.p10-faq__answer p:last-child { margin-bottom: 0; }
+
+/* Stand-alone statistics band ------------------------------------------ */
+.p10-el-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--p10-line);
+  background: var(--p10-line);
+}
+.p10-el-stats .p10-stat {
+  background: var(--p10-ink);
+  padding: clamp(1.4rem, 3vw, 2.4rem);
+  text-align: center;
+  border: 0;
+}
+.p10-el-stats .p10-stat__value {
+  display: block;
+  font-family: var(--p10-display);
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  color: var(--p10-gold);
+  line-height: 1;
+}
+.p10-el-stats .p10-stat__label {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--p10-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--p10-muted);
+}
+@media (max-width: 720px) {
+  .p10-el-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Demo-content disclosure ------------------------------------------------ */
+.p10-sample-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--p10-line);
+  color: var(--p10-gold);
+  font-family: var(--p10-ui);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.p10-review__sample {
+  display: block;
+  margin-top: 0.9rem;
+  font-family: var(--p10-ui);
+  font-size: 0.63rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--p10-muted-2);
+}
+
+/* Page-head widget ------------------------------------------------------ */
+.p10-page-head--widget .p10-page-head__title { margin-top: 0; }
+
+/* Directory widget ------------------------------------------------------ */
+.p10-el-directory .p10-directory-layout { align-items: start; }
+.p10-el-directory .p10-filters { position: sticky; top: calc(var(--p10-header-h) + 24px); }
+@media (max-width: 980px) {
+  .p10-el-directory .p10-filters { position: static; }
+}
+
+/* Location selector reuse ----------------------------------------------- */
+.p10-search__grid .p10-field--button { justify-content: flex-end; }
+
+/* Forms inside Elementor ------------------------------------------------- */
+.elementor-widget .p10-form { margin: 0; }
+.elementor-widget .p10-form__grid { row-gap: calc(var(--p10-fluid-space) * 1.1); }
+.elementor-widget .p10-form__privacy a { color: var(--p10-gold-soft); text-decoration: underline; }
+
+/* Profile facts / gallery inside Elementor ------------------------------ */
+.elementor-widget .p10-profile-specs { margin: 0; }
+.elementor-widget .p10-gallery { margin: 0; }
+
+/* Editorial list (Numbered Section repeater) ---------------------------- */
+.p10-el-list {
+  display: grid;
+  grid-template-columns: repeat(var(--p10-list-columns, 3), minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 28px);
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+.p10-el-list__item {
+  position: relative;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  border: 1px solid var(--p10-line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.005));
+  transition: border-color var(--p10-fast) var(--p10-ease), transform var(--p10-med) var(--p10-ease);
+}
+.p10-el-list__item:hover {
+  border-color: rgb(var(--p10-gold-rgb) / 0.38);
+  transform: translateY(-3px);
+}
+.p10-el-list__num {
+  display: block;
+  margin-bottom: 0.9rem;
+  font-family: var(--p10-ui);
+  font-size: 0.64rem;
+  letter-spacing: 0.24em;
+  color: var(--p10-gold);
+}
+.p10-el-list__title {
+  margin: 0 0 0.55rem;
+  font-family: var(--p10-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+  color: var(--p10-cream);
+}
+.p10-el-list__desc {
+  margin: 0;
+  color: var(--p10-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+.p10-el-list__link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: var(--p10-ui);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--p10-gold);
+  border-bottom: 1px solid var(--p10-line);
+}
+@media (max-width: 900px) {
+  .p10-el-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .p10-el-list { grid-template-columns: 1fr; }
+}
+
+/* Breadcrumbs widget ---------------------------------------------------- */
+.elementor-widget .p10-breadcrumb { margin-bottom: calc(var(--p10-fluid-space) * 1.1); }
+
+/* Editor preview affordance --------------------------------------------- */
+.elementor-editor-active .p10-empty {
+  border-style: dashed;
+  color: var(--p10-gold-soft);
+}
+.elementor-editor-active .p10-empty::before {
+  content: "◆ ";
+  color: var(--p10-gold);
+}
+
+/* Respect the theme motion setting inside Elementor documents. */
+.p10-reduced-motion .p10-el-list__item,
+.p10-reduced-motion .p10-card:hover {
+  transform: none;
+}
+
+/* Reviews trust marker -------------------------------------------------- */
+.p10-review__sample {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.12rem 0.5rem;
+  border: 1px solid rgb(var(--p10-gold-rgb) / 0.35);
+  color: var(--p10-gold);
+  font-family: var(--p10-ui);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.p10-reviews-note {
+  margin: clamp(1.4rem, 2.5vw, 2.2rem) 0 0;
+  max-width: 78ch;
+  color: var(--p10-muted);
+  font-family: var(--p10-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  line-height: 1.7;
+}
+
+/* Phone band ------------------------------------------------------------ */
+.p10-phone-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.4rem;
+  padding: clamp(1.2rem, 2.5vw, 2rem) 0;
+}
+.p10-phone-band--center {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.p10-phone-band__number {
+  color: var(--p10-cream);
+  font-family: var(--p10-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+  letter-spacing: 0.02em;
+  transition: color var(--p10-fast) var(--p10-ease);
+}
+.p10-phone-band__number:hover { color: var(--p10-gold); }
+.p10-phone-band__note {
+  margin: 0;
+  color: var(--p10-muted);
+  font-family: var(--p10-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+/* Form wrapper and widget headings ------------------------------------- */
+.p10-form-wrap {
+  max-width: 880px;
+  margin-inline: auto;
+}
+.p10-form-wrap .p10-section-head { margin-bottom: clamp(1.6rem, 3vw, 2.6rem); }
+.p10-form-wrap__privacy {
+  margin-top: 1rem;
+  color: var(--p10-muted);
+  font-family: var(--p10-ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  line-height: 1.65;
+}
+
+.p10-heading-block--rule {
+  padding-top: clamp(1.2rem, 2.4vw, 2rem);
+  border-top: 1px solid var(--p10-line);
+}
+
+.p10-btn-wrap--center { text-align: center; }
+.p10-btn-wrap--right { text-align: right; }
+
+.p10-breadcrumb-wrap--center .p10-breadcrumb { justify-content: center; }
+
+/* Elementor preview: keep section rhythm identical to the front end ------ */
+.elementor-editor-active .elementor-widget[class*="elementor-widget-p10-"] > .elementor-widget-container {
+  overflow: visible;
+}
+
+@media (max-width: 767px) {
+  .p10-phone-band { flex-direction: column; align-items: flex-start; }
+  .p10-phone-band--center { align-items: center; }
+}
